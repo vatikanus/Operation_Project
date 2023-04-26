@@ -10,6 +10,7 @@ import java.util.concurrent.TimeUnit;
 public class ApplicationManager {
     EventFiringWebDriver wd;
     String browser;
+    QAToolsHelper QA;
 
     public ApplicationManager(String browser){
         this.browser= browser;
@@ -26,10 +27,14 @@ public class ApplicationManager {
 
         wd.navigate().to("https://demoqa.com/");
         wd.manage().timeouts().implicitlyWait(4, TimeUnit.SECONDS);
+        QA= new QAToolsHelper(wd);
     }
     public void stop() {
 
         wd.quit();
     }
 
+public QAToolsHelper getQA(){
+        return QA;
+}
 }
