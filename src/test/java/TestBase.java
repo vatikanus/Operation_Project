@@ -14,13 +14,14 @@ public class TestBase {
 
         app.init();
 
-    }
-
-    @AfterSuite(alwaysRun = true)
-    public void tearDown() {
-        app.stop();
 
     }
+
+  //  @AfterSuite(alwaysRun = true)
+ //   public void tearDown() {
+  //      app.stop();
+
+  //  }
 
 
 

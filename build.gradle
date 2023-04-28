@@ -2,7 +2,7 @@ plugins {
     id 'java'
 }
 
-group 'com.roman'
+group 'org.Alisa'
 version '1.0-SNAPSHOT'
 
 repositories {
@@ -10,15 +10,10 @@ repositories {
 }
 
 dependencies {
-    implementation 'org.testng:testng:7.1.0'
-    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
-    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
-    // Leon add :
-    implementation group: 'org.seleniumhq.selenium', name: 'selenium-chrome-driver', version: '3.141.59'
-    implementation group: 'org.seleniumhq.selenium', name: 'selenium-firefox-driver', version: '3.141.59'
-    implementation group: 'org.seleniumhq.selenium', name: 'selenium-support', version: '3.141.59'
+    implementation 'org.testng:testng:7.4.0'
+    implementation 'org.seleniumhq.selenium:selenium-java:3.141.59'
 }
 
 test {
-    useJUnitPlatform()
+    useTestNG()
 }
