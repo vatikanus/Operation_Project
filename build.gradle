@@ -2,7 +2,7 @@ plugins {
     id 'java'
 }
 
-group 'org.Alisa'
+group 'telran.com'
 version '1.0-SNAPSHOT'
 
 repositories {
@@ -10,8 +10,11 @@ repositories {
 }
 
 dependencies {
-    implementation 'org.testng:testng:7.4.0'
-    implementation 'org.seleniumhq.selenium:selenium-java:3.141.59'
+    implementation group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '3.141.59'
+    // implementation group: 'org.seleniumhq.selenium', name: 'selenium-chrome-driver', version: '3.141.59'
+    testImplementation group: 'org.testng', name: 'testng', version: '7.4.0'
+
+
 }
 
 test {
